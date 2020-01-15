@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Accidental Shayar | Best hindi shayaris truly from heart</title>
+	<link rel="icon" href="{% static 'images/blog_logo.jpeg' %}" type="image/jpeg" sizes="16x16">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Best Hindi Shayaris in which words are enough for the feelings" />
+	<meta name="keywords" content="Best Shayaris, sad shayaris, friendship shayaris, romantic shayaris, shayaris, shayar, hindi shayari,
+	shayari in hindi, love shayari" />
+	<meta name="author" content="accidentalshayar.com" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	{% include "includecss.html" %}
+
+	</head>
+	<body>
+
+	    <div class="fh5co-loader"></div>
+
+        <div id="page">
+            {% include "header.html" %}
+
+            <div id="fh5co-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-padded-right">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="fh5co-blog animate-box">
+                                        <div class="title title-pin text-center">
+                                            <span class="posted-on">{{ detail.date_created }}</span>
+                                            <h3><a href="#">{{ detail.name }}</a></h3>
+                                            <span class="category">{{ detail.category }}</span>
+                                        </div>
+                                        <a target="_blank" href="/shayari/{{detail.id}}">
+                                            <img class="img-responsive" src="{{ detail.img.url }}" alt="">
+                                        </a>
+                                        <div class="blog-text text-center">
+                                            <p>{{ detail.desc }}</p>
+                                            <ul class="fh5co-social-icons">
+                                                <li>Share:</li>
+                                                <li>
+                                                    <a href="http://twitter.com/share?text=Accidental Shayar | Best hindi shayaris truly from heart&url=http://127.0.0.1:8000/">
+                                                        <i class="icon-twitter-with-circle"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/">
+                                                        <i class="icon-facebook-with-circle"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://127.0.0.1:8000/">
+                                                        <i class="icon-linkedin-with-circle"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include "footer.html" %}
+	    </div>
+
+        <div class="gototop js-top">
+            <a href="#" class="js-gotop">
+                <i class="icon-arrow-up"></i>
+            </a>
+        </div>
+
+        {% include "includejs.html" %}
+    </body>
+</html>

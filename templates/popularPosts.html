@@ -1,0 +1,48 @@
+{% load static %}
+
+
+    <div id="fh5co-blog-popular">
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-md-12 col-md-offset-0 text-center fh5co-heading">
+                    <h2><span>Popular Post</span></h2>
+                </div>
+            </div>
+            <div class="row">
+                {% for shy in shayar %}
+                <div class="col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <a target="_blank" href="/shayari/{{shy.name}}"><img class="img-responsive" src="{{ shy.img.url }}" alt="{{ shy.name }}"></a>
+                        <div class="blog-text">
+                            <h3><a href="#">{{ shy.name }}</a></h3>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+<!--                <div class="col-md-3">-->
+<!--                    <div class="fh5co-blog animate-box">-->
+<!--                        <a href="#"><img class="img-responsive" src="{% static 'images/blog-2.jpg' %}" alt=""></a>-->
+<!--                        <div class="blog-text">-->
+<!--                            <h3><a href="#">List Minimal Design</a></h3>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-3">-->
+<!--                    <div class="fh5co-blog animate-box">-->
+<!--                        <a href="#"><img class="img-responsive" src="{% static 'images/blog-1-old.jpg' %}" alt=""></a>-->
+<!--                        <div class="blog-text">-->
+<!--                            <h3><a href="#">Modeling Spotted</a></h3>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-3">-->
+<!--                    <div class="fh5co-blog animate-box">-->
+<!--                        <a href="#"><img class="img-responsive" src="{% static 'images/blog-2.jpg' %}" alt=""></a>-->
+<!--                        <div class="blog-text">-->
+<!--                            <h3><a href="#">Around The World</a></h3>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Accidental Shayar | Best hindi shayaris truly from heart</title>
+	<link rel="icon" href="{% static 'images/blog_logo.jpeg' %}" type="image/jpeg" sizes="16x16">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Best Hindi Shayaris in which words are enough for the feelings" />
+	<meta name="keywords" content="Best Shayaris, sad shayaris, friendship shayaris, romantic shayaris, shayaris, shayar, hindi shayari,
+	shayari in hindi, love shayari" />
+	<meta name="author" content="accidentalshayar.com" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	{% include "includecss.html" %}
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	{% include "header.html" %}
+
+	<aside id="fh5co-hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="flexslider animate-box">
+						<ul class="slides">
+							{% for shy in shayar %}
+								<li style="background-image: url('{{MEDIA_URL}}{{shy.img.url}}')">
+									<div class="overlay-gradient"></div>
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-md-10 col-md-offset-1 slider-text">
+												<div class="slider-text-inner">
+													<h1>{{ shy.name }}</h1>
+													<h2>{{ shy.desc }}</h2>
+<!--													<p class="ct">-->
+<!--														<a href="#">Learn More <i class="icon-arrow-right"></i></a>-->
+<!--													</p>-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							{% endfor %}
+<!--					   	<li style="background-image: url({% static 'images/img_bg_2.jpg' %});">-->
+<!--					   		<div class="overlay-gradient"></div>-->
+<!--					   		<div class="container-fluid">-->
+<!--					   			<div class="row">-->
+<!--						   			<div class="col-md-10 col-md-offset-1 slider-text">-->
+<!--						   				<div class="slider-text-inner">-->
+<!--						   					<h1>Minimal &amp; Clean Blog WordPress</h1>-->
+<!--												<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>-->
+<!--												<p class="ct"><a href="#">Learn More <i class="icon-arrow-right"></i></a></p>-->
+<!--						   				</div>-->
+<!--						   			</div>-->
+<!--						   		</div>-->
+<!--					   		</div>-->
+<!--					   	</li>-->
+<!--					   	<li style="background-image: url({% static 'images/img_bg_3.jpg' %});">-->
+<!--					   		<div class="overlay-gradient"></div>-->
+<!--					   		<div class="container-fluid">-->
+<!--					   			<div class="row">-->
+<!--						   			<div class="col-md-10 col-md-offset-1 slider-text">-->
+<!--						   				<div class="slider-text-inner">-->
+<!--						   					<h1>What Would You Like To Learn?</h1>-->
+<!--												<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>-->
+<!--												<p class="ct"><a href="#">Learn More <i class="icon-arrow-right"></i></a></p>-->
+<!--						   				</div>-->
+<!--						   			</div>-->
+<!--						   		</div>-->
+<!--					   		</div>-->
+<!--					   	</li>		   	-->
+					  	</ul>
+				  	</div>
+				</div>
+				<div class="col-md-4">
+					<a href="#" class="featured text-center animate-box" style="background-image: url({% static 'images/img_bg_3.jpg' %});">
+						<div class="desc">
+							<span class="date">Dec 25, 2016</span>
+							<h3>Every Start has an End</h3>
+							<span class="category">Inspirational</span>
+						</div>
+					</a>
+					<a href="#" class="featured text-center animate-box" style="background-image: url({% static 'images/img_bg_2.jpg' %});">
+						<div class="desc">
+							<span class="date">Dec 25, 2016</span>
+							<h3>Most Beautiful Website in 2016</h3>
+							<span class="category">Inspirational</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</aside>
+
+	{% include "popularPosts.html" %}
+
+	<div id="fh5co-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 col-padded-right">
+					<div class="row">
+
+						{% for shy in shayar %}
+							{% if forloop.counter == 1 %}
+								<div class="col-md-12">
+									<div class="fh5co-blog animate-box">
+										<div class="title title-pin text-center">
+											<span class="posted-on">{{ shy.date_created }}</span>
+											<h3><a href="#">{{ shy.name }}</a></h3>
+											<span class="category">{{ shy.category }}</span>
+										</div>
+										<a target="_blank" href="/shayari/{{shy.name}}">
+                                            <img class="img-responsive" src="{{ shy.img.url }}" alt="">
+                                        </a>
+										<div class="blog-text text-center">
+											<p>{{ shy.desc }}</p>
+											<ul class="fh5co-social-icons">
+												<li>Share:</li>
+												<li>
+													<a href="http://twitter.com/share?text=Accidental Shayar | Best hindi shayaris truly from heart&url=http://127.0.0.1:8000/">
+														<i class="icon-twitter-with-circle"></i>
+													</a>
+												</li>
+												<li>
+													<a href="http://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/">
+														<i class="icon-facebook-with-circle"></i>
+													</a>
+												</li>
+												<li>
+													<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://127.0.0.1:8000/">
+														<i class="icon-linkedin-with-circle"></i>
+													</a>
+												</li>
+<!--												<li>-->
+<!--													<a href="#">-->
+<!--														<i class="icon-instagram-with-circle"></i>-->
+<!--													</a>-->
+<!--												</li>-->
+											</ul>
+										</div>
+									</div>
+								</div>
+							{% else %}
+								<div class="col-md-6">
+									<div class="fh5co-blog animate-box">
+										<div class="title text-center">
+											<span class="posted-on">{{ shy.date_created }}</span>
+											<h3><a href="/shayari/{{shy.name}}" target="_blank">{{ shy.name }}</a></h3>
+											<span class="category">{{ shy.category }}</span>
+										</div>
+										<a target="_blank" href="/shayari/{{shy.name}}">
+											<img class="img-responsive" src="{{ shy.img.url }}" alt="">
+										</a>
+										<div class="blog-text text-center">
+											<p>{{ shy.desc }}.</p>
+											<ul class="fh5co-social-icons">
+												<li>Share:</li>
+												<li>
+													<a href="http://twitter.com/share?text=Accidental Shayar | Best hindi shayaris truly from heart&url=http://127.0.0.1:8000/">
+														<i class="icon-twitter-with-circle"></i>
+													</a>
+												</li>
+												<li>
+													<a href="http://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/">
+														<i class="icon-facebook-with-circle"></i>
+													</a>
+												</li>
+												<li>
+													<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://127.0.0.1:8000/">
+														<i class="icon-linkedin-with-circle"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+				
+				<aside id="sidebar">
+					<div class="col-md-3">
+						<div class="side animate-box">
+							<div class="col-md-12 col-md-offset-0 text-center fh5co-heading fh5co-heading-sidebar">
+								<h2><span>About Me</span></h2>
+							</div>
+							<div class="fh5co-staff">
+								<img src="{% static 'images/about-me.jpg' %}" alt="Free HTML5 Templates by FreeHTML5.co">
+								<h3>Uttam Jain</h3>
+								<strong class="role">@AccidentalShayar</strong>
+								<p>Software Engineer by profession, shayar from heart, dance from dil se, travelling pure mann se and hasna khoob zoro se.</p>
+								<ul class="fh5co-social-icons">
+									<li>
+										<a target="_blank" href="https://www.facebook.com/profile.php?id=100010775192774&ref=bookmarks">
+											<i class="icon-facebook"></i>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.instagram.com/accidentalshayar/">
+											<i class="icon-instagram"></i>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="https://twitter.com/UttamJa28727163">
+											<i class="icon-twitter"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="side animate-box">
+							<div class="col-md-12 col-md-offset-0 text-center fh5co-heading fh5co-heading-sidebar">
+								<h2><span>Latest Posts</span></h2>
+							</div>
+                            {% for shy in shayar %}
+                                <div class="blog-entry">
+                                    <a target="_blank" href="/shayari/{{shy.name}}">
+                                        <img src="{{ shy.img.url }}" class="img-responsive" alt="{{ shy.name }}">
+                                        <div class="desc">
+                                            <span class="date">{{ shy.date_created }}</span>
+                                            <h3>{{ shy.name }}</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
+						</div>
+						<div class="side animate-box">
+							<div class="col-md-12 col-md-offset-0 text-center fh5co-heading fh5co-heading-sidebar">
+								<h2><span>Category</span></h2>
+							</div>
+							<ul class="category">
+								{% for choice in category %}
+									<li>
+										<a href="#">
+											<i class="icon-check"></i>
+											{{ choice.name | title }}
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="side animate-box">
+							<div class="col-md-12 col-md-offset-0 text-center fh5co-heading fh5co-heading-sidebar">
+								<h2><span>Intagram</span></h2>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="insta" style="background-image: url({% static 'images/insta-1.jpg' %});">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-instagram">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-12 col-md-offset-0 text-center fh5co-heading">
+					<h2><span>Instagram Posts</span></h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 nopadding animate-box" data-animate-effect="fadeIn">
+				<div class="insta" style="background-image: url({% static 'images/insta-1.jpg' %});"></div>
+			</div>
+			<div class="col-md-3 nopadding animate-box" data-animate-effect="fadeIn">
+				<div class="insta" style="background-image: url({% static 'images/insta-2.jpg' %});"></div>
+			</div>
+			<div class="col-md-3 nopadding animate-box" data-animate-effect="fadeIn">
+				<div class="insta" style="background-image: url({% static 'images/insta-3.jpg' %});"></div>
+			</div>
+			<div class="col-md-3 nopadding animate-box" data-animate-effect="fadeIn">
+				<div class="insta" style="background-image: url({% static 'images/insta-4.jpg' %});"></div>
+			</div>
+		</div>
+	</div>
+
+		{% include "footer.html" %}
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	{% include "includejs.html" %}
+
+	</body>
+</html>
+
