@@ -1,1 +1,1 @@
-web: gunicorn accidentalShayar.wsgi --log-file
+web: gunicorn accidentalShayar.wsgi --log-file -
