@@ -86,8 +86,17 @@ WSGI_APPLICATION = 'accidentalShayar.wsgi.application'
 #         'HOST': ''
 #     }
 # }
-
-DATABASES = {'default': dj_database_url.config(conn_max_age=600)}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3di95jo4urk1v',
+        'USER': 'endiospxlbartm',
+        'PASSWORD': '47b5a1cbb1cb3a68f1165469a0c64e4014ac7951567f091f458ff9668e2474fb',
+        'HOST': 'ec2-174-129-33-217.compute-1.amazonaws.com',
+        'PORT': 5435
+    }
+}
+# DATABASES = {'default': dj_database_url.config(conn_max_age=600)}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
