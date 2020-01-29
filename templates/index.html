@@ -136,7 +136,7 @@
 											<h3><a href="#">{{ shy.name }}</a></h3>
 											<span class="category">{{ shy.category }}</span>
 										</div>
-										<a target="_blank" href="/shayari/{{shy.name}}">
+										<a target="_blank" href="/shayari/{{shy.id}}">
                                             <img class="img-responsive" src="{{ shy.img.url }}" alt="">
                                         </a>
 										<div class="blog-text text-center">
@@ -172,7 +172,7 @@
 									<div class="fh5co-blog animate-box">
 										<div class="title text-center">
 											<span class="posted-on">{{ shy.date_created }}</span>
-											<h3><a href="/shayari/{{shy.name}}" target="_blank">{{ shy.name }}</a></h3>
+											<h3><a href="/shayari/{{shy.id}}" target="_blank">{{ shy.name }}</a></h3>
 											<span class="category">{{ shy.category }}</span>
 										</div>
 										<a target="_blank" href="/shayari/{{shy.name}}">
@@ -242,7 +242,7 @@
 							</div>
                             {% for shy in shayar %}
                                 <div class="blog-entry">
-                                    <a target="_blank" href="/shayari/{{shy.name}}">
+                                    <a target="_blank" href="/shayari/{{shy.id}}">
                                         <img src="{{ shy.img.url }}" class="img-responsive" alt="{{ shy.name }}">
                                         <div class="desc">
                                             <span class="date">{{ shy.date_created }}</span>
