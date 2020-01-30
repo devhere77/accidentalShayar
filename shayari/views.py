@@ -7,8 +7,9 @@ from .models import Shayari, Category
 
 def home(request):
     shayari = Shayari.objects.all()
+    revShayari = Shayari.objects.all().order_by('-date_created')
     category = Category.objects.all()
-    return render(request, 'index.html', {'shayar': shayari, 'category': category})
+    return render(request, 'index.html', {'shayar': shayari, 'category': category, 'revShayari': revShayari})
 
 
 def about(request):

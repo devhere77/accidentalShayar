@@ -86,7 +86,6 @@ WSGI_APPLICATION = 'accidentalShayar.wsgi.application'
 #         'HOST': ''
 #     }
 # }
-# DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'd3di95jo4urk1v',
