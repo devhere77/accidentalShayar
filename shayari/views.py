@@ -6,7 +6,7 @@ from .models import Shayari, Category
 
 
 def home(request):
-    shayari = Shayari.objects.all()
+    shayari = Shayari.objects.all().order_by('-id')
     revShayari = Shayari.objects.all().order_by('-date_created')[:4]
     category = Category.objects.all()
     return render(request, 'index.html', {'shayar': shayari, 'category': category, 'revShayari': revShayari})
@@ -23,3 +23,7 @@ def contact(request):
 def shayari(request, id):
     shyri = Shayari.objects.get(pk=id)
     return render(request, 'shayari.html', {'detail': shyri})
+
+
+def privacyPolicy(request):
+    return render(request, 'privacypolicy.html')
