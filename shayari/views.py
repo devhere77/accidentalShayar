@@ -27,3 +27,9 @@ def shayari(request, id):
 
 def privacyPolicy(request):
     return render(request, 'privacypolicy.html')
+
+
+def categoryShayari(request, slug):
+    slugs = format(slug.upper())
+    shayaris = Shayari.objects.filter(category=slugs)
+    return render(request, 'categoryShayari.html', {'shayariByCategory': shayaris})
