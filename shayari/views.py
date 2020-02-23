@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Shayari, Category
+import random
 
 # Create your views here.
 
@@ -8,8 +9,9 @@ from .models import Shayari, Category
 def home(request):
     shayari = Shayari.objects.all().order_by('-id')
     revShayari = Shayari.objects.all().order_by('-date_created')[:4]
+    popPost = random.sample(list(shayari), 4)
     category = Category.objects.all()
-    return render(request, 'index.html', {'shayar': shayari, 'category': category, 'revShayari': revShayari})
+    return render(request, 'index.html', {'shayar': shayari, 'category': category, 'revShayari': revShayari, 'popPost': popPost})
 
 
 def about(request):

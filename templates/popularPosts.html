@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="row">
-                {% for shy in shayar %}
+                {% for shy in popPost %}
                 <div class="col-md-3">
                     <div class="fh5co-blog animate-box">
                         <a target="_blank" href="/shayari/{{shy.id}}"><img class="img-responsive" src="{{ shy.img.url }}" alt="{{ shy.name }}"></a>
@@ -19,30 +19,6 @@
                     </div>
                 </div>
                 {% endfor %}
-<!--                <div class="col-md-3">-->
-<!--                    <div class="fh5co-blog animate-box">-->
-<!--                        <a href="#"><img class="img-responsive" src="{% static 'images/blog-2.jpg' %}" alt=""></a>-->
-<!--                        <div class="blog-text">-->
-<!--                            <h3><a href="#">List Minimal Design</a></h3>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-md-3">-->
-<!--                    <div class="fh5co-blog animate-box">-->
-<!--                        <a href="#"><img class="img-responsive" src="{% static 'images/blog-1-old.jpg' %}" alt=""></a>-->
-<!--                        <div class="blog-text">-->
-<!--                            <h3><a href="#">Modeling Spotted</a></h3>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-md-3">-->
-<!--                    <div class="fh5co-blog animate-box">-->
-<!--                        <a href="#"><img class="img-responsive" src="{% static 'images/blog-2.jpg' %}" alt=""></a>-->
-<!--                        <div class="blog-text">-->
-<!--                            <h3><a href="#">Around The World</a></h3>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
         </div>
     </div>
