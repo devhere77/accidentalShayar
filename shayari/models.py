@@ -11,6 +11,7 @@ class Shayari(models.Model):
         ('ROMANTIC', 'Romantic'),
         ('LIFE', 'Life'),
         ('COMEDY', 'Comedy'),
+        ('FRIENDSHIP', 'Friendship')
     )
     name = models.CharField(max_length=100)
     desc = models.TextField()
